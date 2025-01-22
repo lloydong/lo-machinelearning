@@ -19,8 +19,8 @@ with st.expander('Data'):
   y = df['count']
   y
 
-# with st.expander('Data visualization'):
-#   st.scatter_chart(data=df, x='temperature',y='count', x_label='Temperature,°C', y_label='Total Rentals')
+with st.expander('Data visualization'):
+  st.scatter_chart(data=df, x='temp',y='count', x_label='Temperature,°C', y_label='Total Rentals')
 
 # #Data preparations
 # with st.sidebar:

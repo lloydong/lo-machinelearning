@@ -65,7 +65,10 @@ prediction = linreg.predict(input_df)
 total_rentals = int(prediction) 
 
 st.subheader('Predicted Total Rentals')
-st.success(f"We have a count of {total_rentals} bike rentals today!")
+if total_rentals < 0:
+  st.success(f"Unfortunately we do not have any bike rentals today!")
+else:
+  st.success(f"We have a count of {total_rentals} bike rentals today!")
 
 
 

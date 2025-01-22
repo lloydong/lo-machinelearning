@@ -27,7 +27,7 @@ with st.sidebar:
   st.header('Input features')
   temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
   humidity = st.slider('Humidity, %',0,100,50)
-  hour = st.hour('Hour',0,24,19)
+  hour = st.slider('Hour',0,24,19)
   season = st.selectbox('Season', ('1','2','3','4'))
   st.markdown('_Details on Season Variable:_')
   "1 = winter, 2 = spring, 3 = summer, 4 = fall"

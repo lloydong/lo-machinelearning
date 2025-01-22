@@ -65,7 +65,7 @@ prediction = linreg.predict(input_df)
 total_rentals = round(prediction) 
 
 st.subheader('Predicted Total Rentals')
-st.success(f"We have a count of {total_rentals} bike rentals today!)
+st.success(f"We have a count of {total_rentals} bike rentals today!")
 
 
 

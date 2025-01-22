@@ -48,9 +48,9 @@ with st.sidebar:
   input_df=pd.DataFrame(data, index=[0])
   # input_rentals = pd.concat([input_df,X_raw],axis=0)
 
-# with st.expander('Input features'):
-#   st.write('**Inputs from Users**')
-#   input_df
+with st.expander('Input features'):
+  st.write('**Inputs from Users**')
+  input_df
 
 # with st.expander('Data preparation'):
 #   st.write('**Selected features to train the model**')

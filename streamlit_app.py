@@ -26,6 +26,7 @@ with st.expander('Data visualization'):
 with st.sidebar:
   st.header('Input features')
   temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
+  humidity = st.slider('Humidity, %',0,100,50)
   season = st.selectbox('Season', ('1','2','3','4'))
   "1 = winter, 2 = spring, 3 = summer, 4 = fall"
   weather = st.selectbox('Weather', ('1','2','3','4'))
@@ -33,9 +34,8 @@ with st.sidebar:
   "2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist"
   "3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds"
   "4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
-  humidity = st.slider('Humidity, %',0,100,50)
   
-#Create a DataFrame for the input features
+  #Create a DataFrame for the input features
   data = {'temperature': temperature,
         'season': season,
         'weather': weather,
@@ -45,19 +45,15 @@ with st.sidebar:
   input_rentals = pd.concat([input_df,X_raw],axis=0)
 
 with st.expander('Input features'):
-  st.write('**Input rental**')
+  st.write('**Inputs from Users**')
   input_df
-  st.write('**Combined rentals data**')
-  input_rentals
+  st.write('**Selected Features to Train the Model**')
+  feature_cols = ['temperature', 'season', 'weather', 'humidity']
+  X = X_raw[feature_cols]
+  X
 
 # Model training and inference
 ## Train the ML model
-
-feature_cols = ['temperature', 'season', 'weather', 'humidity']
-X = X_raw[feature_cols]
-X
-# X = X_selected[1:] #ignore the first row
-# input_row = X_selected[:1]
 
 linreg = LinearRegression()
 linreg.fit(X, y)

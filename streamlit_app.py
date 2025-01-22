@@ -58,23 +58,23 @@ with st.expander('Data preparation'):
   X = X_raw[feature_cols]
   X
 
-# Model training and inference
-## Train the ML model
+# # Model training and inference
+# ## Train the ML model
 
-linreg = LinearRegression()
-linreg.fit(X, y)
+# linreg = LinearRegression()
+# linreg.fit(X, y)
 
-# Apply model to make prediction
-prediction = linreg.predict(input_df)
-total_rentals = int(prediction) 
+# # Apply model to make prediction
+# prediction = linreg.predict(input_df)
+# total_rentals = int(prediction) 
 
-st.subheader('Predicted Total Rentals')
-if total_rentals < 0:
-  st.success(f"Unfortunately we do not have any bike rentals today!")
+# st.subheader('Predicted Total Rentals')
+# if total_rentals < 0:
+#   st.success(f"Unfortunately we do not have any bike rentals today!")
 
-#storey_dummies = pd.get_dummies(train_df.storey_range, prefix='storey_range',drop_first=True)
-else:
-  st.success(f"We have a count of {total_rentals} bike rentals today!")
+# #storey_dummies = pd.get_dummies(train_df.storey_range, prefix='storey_range',drop_first=True)
+# else:
+#   st.success(f"We have a count of {total_rentals} bike rentals today!")
 
 
 

@@ -58,15 +58,15 @@ with st.expander('Data preparation'):
   X = X_raw[feature_cols]
   X
 
-# # Model training and inference
-# ## Train the ML model
+# Model training and inference
+## Train the ML model
 
-# linreg = LinearRegression()
-# linreg.fit(X, y)
+linreg = LinearRegression()
+linreg.fit(X, y)
 
-# # Apply model to make prediction
-# prediction = linreg.predict(input_df)
-# total_rentals = int(prediction) 
+# Apply model to make prediction
+prediction = linreg.predict(input_df)
+total_rentals = int(prediction) 
 
 # st.subheader('Predicted Total Rentals')
 # if total_rentals < 0:

@@ -17,6 +17,7 @@ with st.expander('Data'):
 
   st.write('**y**')
   y = df.count
+  y
 
 with st.expander('Data visualization'):
   st.scatter_chart(data=df, x='temperature',y='count', x_label='Temperature,°C', y_label='Total Rentals')

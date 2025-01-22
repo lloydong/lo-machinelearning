@@ -24,6 +24,8 @@ with st.expander('Data visualization'):
 #Data preparations
 with st.sidebar:
   st.header('Input features')
+  temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
+  humidity = st.slider('Humidity, %',0,100,50)
   season = st.selectbox('Season', ('1','2','3','4'))
   "1 = winter, 2 = spring, 3 = summer, 4 = fall"
   weather = st.selectbox('Weather', ('1','2','3','4'))
@@ -31,8 +33,7 @@ with st.sidebar:
   "2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist"
   "3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds"
   "4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
-  temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
-  humidity = st.slider('Humidity, %',0,100,50)
+
 
 
 

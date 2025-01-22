@@ -9,3 +9,10 @@ with st.expander('Data'):
   st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/lloydong/lo-machinelearning/refs/heads/master/data/bikeshare.csv')
   df
+
+  st.write('**X**')
+  X = df.drop('count', axies=1)
+  X
+
+  st.write('**y**')
+  y = df.count

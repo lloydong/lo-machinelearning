@@ -47,7 +47,9 @@ with st.sidebar:
 with st.expander('Input features'):
   st.write('**Inputs from Users**')
   input_df
-  st.write('**Selected Features to Train the Model**')
+
+with st.expander('Data preparation'):
+  st.write('**Selected features to train the model**')
   feature_cols = ['temperature', 'season', 'weather', 'humidity']
   X = X_raw[feature_cols]
   X
@@ -62,6 +64,7 @@ linreg.fit(X, y)
 prediction = linreg.predict(input_df)
 prediction 
 
+st.subheader('Predicted Total Rentals')
 
 
 

@@ -42,7 +42,7 @@ with st.sidebar:
   data = {'temperature': temperature,
         'season': season,
         'weather': weather,
-        'humidity': humidity
+        'humidity': humidity,
           'hour': hour
       }
   input_df=pd.DataFrame(data, index=[0])

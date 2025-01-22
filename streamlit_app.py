@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 st.title('🤖Machine Learning App')
 
@@ -22,5 +20,4 @@ with st.expander('Data'):
 
 with st.expander('Data visualization'):
   st.title("Bike Rentals Analysis")
-  sns.lmplot(x='temp', y='total_rentals', data=bikes, scatter_kws={'alpha':0.1})
-  st.pyplot(plt)
+  st.scatter_chart(data=df, x='temp',y='count')

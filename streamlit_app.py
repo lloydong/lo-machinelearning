@@ -59,8 +59,8 @@ X
 # X = X_selected[1:] #ignore the first row
 # input_row = X_selected[:1]
 
-# linreg = LinearRegression()
-# linreg.fit(X, y)
+linreg = LinearRegression()
+linreg.fit(X, y)
 
 
 

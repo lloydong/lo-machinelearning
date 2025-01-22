@@ -25,7 +25,7 @@ with st.expander('Data visualization'):
 with st.sidebar:
   st.header('Input features')
   "","temperature", "season", "humidity"
-  temperature = st.slider('Temperature,°C', 0.82, 41, 20)
+  temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
   season = st.selectbox('Season', ('1','2','3','4'))
   humidity = st.slider('Humidity, %',0,100,50)
 

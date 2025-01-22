@@ -9,6 +9,7 @@ st.info('This app builds a machine learning model!')
 with st.expander('Data'):
   st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/lloydong/lo-machinelearning/refs/heads/master/data/bikeshare.csv')
+  df
   df['hour'] = df['datetime'].dt.hour
   df
   

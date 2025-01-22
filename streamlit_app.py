@@ -22,31 +22,31 @@ with st.expander('Data'):
 with st.expander('Data visualization'):
   st.scatter_chart(data=df, x='temperature',y='count', x_label='Temperature,°C', y_label='Total Rentals')
 
-# #Data preparations
-# with st.sidebar:
-#   st.header('Input features')
-#   temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
-#   humidity = st.slider('Humidity, %',0,100,50)
-#   hour = st.hour('Hour',0,24,19)
-#   season = st.selectbox('Season', ('1','2','3','4'))
-#   st.markdown('_Details on Season Variable:_')
-#   "1 = winter, 2 = spring, 3 = summer, 4 = fall"
-#   weather = st.selectbox('Weather', ('1','2','3','4'))
-#   st.markdown('_Details on Weather Variable:_')
-#   "1: Clear, Few clouds, Partly cloudy, Partly cloudy"
-#   "2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist"
-#   "3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds"
-#   "4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
+#Data preparations
+with st.sidebar:
+  st.header('Input features')
+  temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
+  humidity = st.slider('Humidity, %',0,100,50)
+  hour = st.hour('Hour',0,24,19)
+  season = st.selectbox('Season', ('1','2','3','4'))
+  st.markdown('_Details on Season Variable:_')
+  "1 = winter, 2 = spring, 3 = summer, 4 = fall"
+  weather = st.selectbox('Weather', ('1','2','3','4'))
+  st.markdown('_Details on Weather Variable:_')
+  "1: Clear, Few clouds, Partly cloudy, Partly cloudy"
+  "2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist"
+  "3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds"
+  "4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
   
-#   #Create a DataFrame for the input features
-#   data = {'temp': temperature,
-#         'season': season,
-#         'weather': weather,
-#         'humidity': humidity,
-#           'hour': hour
-#       }
-#   input_df=pd.DataFrame(data, index=[0])
-#   # input_rentals = pd.concat([input_df,X_raw],axis=0)
+  #Create a DataFrame for the input features
+  data = {'temp': temperature,
+        'season': season,
+        'weather': weather,
+        'humidity': humidity,
+          'hour': hour
+      }
+  input_df=pd.DataFrame(data, index=[0])
+  # input_rentals = pd.concat([input_df,X_raw],axis=0)
 
 # with st.expander('Input features'):
 #   st.write('**Inputs from Users**')

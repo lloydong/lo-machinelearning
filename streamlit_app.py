@@ -43,7 +43,7 @@ with st.sidebar:
   input_df=pd.DataFrame(data, index=[0])
   input_rentals = pd.concat([input_df,X],axis=0)
 
-input_rentals
+input_df
 
 
 

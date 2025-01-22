@@ -19,5 +19,4 @@ with st.expander('Data'):
   y
 
 with st.expander('Data visualization'):
-  st.title("Bike Rentals Analysis")
-  st.scatter_chart(data=df, x='temp',y='count')
+  st.scatter_chart(data=df, x='temp',y='count', x_label=Temperature (°C), y_label=Total Rentals)

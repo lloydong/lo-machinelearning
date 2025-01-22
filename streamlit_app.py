@@ -54,13 +54,12 @@ with st.expander('Input features'):
 ## Train the ML model
 
 feature_cols = ['temperature', 'season', 'weather', 'humidity']
-X_selected = input_rentals[feature_cols]
-X_selected
-X = X_selected[1:] #ignore the first row
-input_row = X_selected[:1]
+X = X_raw[feature_cols]
+X
+# X = X_selected[1:] #ignore the first row
+# input_row = X_selected[:1]
 
-linreg = LinearRegression()
-linreg.fit(X, y_raw)
+
 
 
 

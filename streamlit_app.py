@@ -62,6 +62,9 @@ X
 linreg = LinearRegression()
 linreg.fit(X, y)
 
+prediction = linreg.predict(input_df)
+prediction 
+
 
 
 

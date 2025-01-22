@@ -9,8 +9,9 @@ st.info('This app builds a machine learning model!')
 with st.expander('Data'):
   st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/lloydong/lo-machinelearning/refs/heads/master/data/bikeshare.csv')
+  df['hour'] = df['datetime'].dt.hour
   df
-
+  
   st.write('**X**')
   X_raw = df.drop('count', axis=1)
   X_raw
@@ -54,12 +55,9 @@ with st.expander('Input features'):
 
 with st.expander('Data preparation'):
   st.write('**Selected features to train the model**')
-
-  X_raw['hour'] = bikes['datetime'].dt.hour
-  X_raw
-  # feature_cols = ['temperature', 'season', 'weather', 'humidity']
-  # X = X_raw[feature_cols]
-  # X
+  feature_cols = ['temperature', 'season', 'weather', 'humidity']
+  X = X_raw[feature_cols]
+  X
 
 
 

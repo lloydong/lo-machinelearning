@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-st.title('🤖Demand Forecasting of Ridership of Bicycle Rentals')
+st.title('🤖Demand Forecasting of Bicycle Rentals')
 
 st.info('This app builds a machine learning model!')
 

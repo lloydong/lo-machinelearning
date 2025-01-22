@@ -39,7 +39,7 @@ with st.sidebar:
   "4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
   
   #Create a DataFrame for the input features
-  data = {'temperature': temperature,
+  data = {'temp': temperature,
         'season': season,
         'weather': weather,
         'humidity': humidity,

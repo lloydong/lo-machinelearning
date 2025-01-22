@@ -60,7 +60,7 @@ X = X_selected[1:] #ignore the first row
 input_row = X_selected[:1]
 
 linreg = LinearRegression()
-# linreg.fit(X, y_raw)
+linreg.fit(X, y_raw)
 
 
 

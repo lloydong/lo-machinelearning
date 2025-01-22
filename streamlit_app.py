@@ -41,7 +41,7 @@ with st.sidebar:
         'weather': weather
       }
   input_df=pd.DataFrame(data, index=[0])
-  input_rentals = pd.concat([input_df,X],axis=0)
+  input_rentals = pd.concat([input_df,X_raw],axis=0)
 
 with st.expander('Input features'):
   st.write('**Input rental**')

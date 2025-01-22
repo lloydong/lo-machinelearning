@@ -28,9 +28,9 @@ with st.sidebar:
   temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
   humidity = st.slider('Humidity, %',0,100,50)
   season = st.selectbox('Season', ('1','2','3','4'))
+  st.markdown('_Details on Season Variable:_')
   "1 = winter, 2 = spring, 3 = summer, 4 = fall"
   weather = st.selectbox('Weather', ('1','2','3','4'))
-  
   st.markdown('_Details on Weather Variable:_')
   "1: Clear, Few clouds, Partly cloudy, Partly cloudy"
   "2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist"

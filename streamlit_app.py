@@ -11,15 +11,15 @@ with st.expander('Data'):
   df
 
   st.write('**X**')
-  X = df.drop('count', axis=1)
-  X
+  X_raw = df.drop('count', axis=1)
+  X_raw
 
   st.write('**y**')
-  y = df.count
-  y
+  y_raw = df.count
+  y_raw
 
 with st.expander('Data visualization'):
-  st.scatter_chart(data=df, x='temp',y='count', x_label='Temperature,°C', y_label='Total Rentals')
+  st.scatter_chart(data=df, x='temperature',y='count', x_label='Temperature,°C', y_label='Total Rentals')
 
 #Data preparations
 with st.sidebar:
@@ -35,7 +35,7 @@ with st.sidebar:
   "4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
 
 #Create a DataFrame for the input features
-  data = {'temp': temperature,
+  data = {'temperature': temperature,
         'humidity': humidity,
         'season': season,
         'weather': weather
@@ -49,7 +49,14 @@ with st.expander('Input features'):
   st.write('**Combined rentals data**')
   input_rentals
 
+# X = input_rentals[1:]
+# input_row = input_rentals[:1]
 
+# X = df[feature_cols]
+# y = df.total_rentals
+
+# linreg = LinearRegression()
+# linreg.fit(X_train, y_train)
 
 
 

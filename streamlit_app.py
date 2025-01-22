@@ -34,6 +34,16 @@ with st.sidebar:
   "3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds"
   "4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
 
+#Create a DataFrame for the input features
+  data = {'temperature': temp,
+        'humidity': humidity,
+        'season': season,
+        'weather': weather
+      }
+  input_df=pd.DataFrame(data, index=[0])
+  input_rentals = pd.concat([input_df,X],axis=0)
+
+input_rentals
 
 
 

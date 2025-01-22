@@ -20,3 +20,16 @@ with st.expander('Data'):
 
 with st.expander('Data visualization'):
   st.scatter_chart(data=df, x='temp',y='count', x_label='Temperature,°C', y_label='Total Rentals')
+
+#Data preparations
+with st.sidebar:
+  st.header('Input features')
+  ",","temperature, "season", "humidity"
+  temperature = st.slider('Temperature,°C', 0.82, 41, 20)
+  season = st.selectbox('Season', ('1','2','3','4'))
+  humidity = st.slider('Humidity, %',0,100,50)
+
+
+
+
+

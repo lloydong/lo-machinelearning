@@ -16,8 +16,8 @@ with st.expander('Data'):
   X_raw
 
   st.write('**y**')
-  y_raw = df.count
-  y_raw
+  y = df.count
+  y
 
 with st.expander('Data visualization'):
   st.scatter_chart(data=df, x='temperature',y='count', x_label='Temperature,°C', y_label='Total Rentals')
@@ -59,6 +59,8 @@ X
 # X = X_selected[1:] #ignore the first row
 # input_row = X_selected[:1]
 
+linreg = LinearRegression()
+linreg.fit(X, y)
 
 
 

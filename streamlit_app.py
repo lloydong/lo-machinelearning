@@ -37,9 +37,9 @@ with st.sidebar:
   
 #Create a DataFrame for the input features
   data = {'temperature': temperature,
-        'humidity': humidity,
         'season': season,
-        'weather': weather
+        'weather': weather,
+        'humidity': humidity
       }
   input_df=pd.DataFrame(data, index=[0])
   input_rentals = pd.concat([input_df,X_raw],axis=0)

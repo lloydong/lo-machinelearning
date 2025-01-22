@@ -27,6 +27,7 @@ with st.sidebar:
   st.header('Input features')
   temperature = st.slider('Temperature,°C', 0.82, 41.0, 20.0)
   humidity = st.slider('Humidity, %',0,100,50)
+  hour = st.hour('Hour',0,24,19)
   season = st.selectbox('Season', ('1','2','3','4'))
   st.markdown('_Details on Season Variable:_')
   "1 = winter, 2 = spring, 3 = summer, 4 = fall"
@@ -42,9 +43,10 @@ with st.sidebar:
         'season': season,
         'weather': weather,
         'humidity': humidity
+          'hour': hour
       }
   input_df=pd.DataFrame(data, index=[0])
-  input_rentals = pd.concat([input_df,X_raw],axis=0)
+  # input_rentals = pd.concat([input_df,X_raw],axis=0)
 
 with st.expander('Input features'):
   st.write('**Inputs from Users**')
@@ -52,9 +54,17 @@ with st.expander('Input features'):
 
 with st.expander('Data preparation'):
   st.write('**Selected features to train the model**')
-  feature_cols = ['temperature', 'season', 'weather', 'humidity']
-  X = X_raw[feature_cols]
-  X
+
+  X_raw['hour'] = bikes['datetime'].dt.hour
+  X_raw
+  # feature_cols = ['temperature', 'season', 'weather', 'humidity']
+  # X = X_raw[feature_cols]
+  # X
+
+
+
+# encode = ['island', 'sex']
+# df_penguins = pd.get_dummies(input_penguins, prefix=encode)
 
 # Model training and inference
 ## Train the ML model
@@ -69,6 +79,8 @@ total_rentals = int(prediction)
 st.subheader('Predicted Total Rentals')
 if total_rentals < 0:
   st.success(f"Unfortunately we do not have any bike rentals today!")
+
+#storey_dummies = pd.get_dummies(train_df.storey_range, prefix='storey_range',drop_first=True)
 else:
   st.success(f"We have a count of {total_rentals} bike rentals today!")
 

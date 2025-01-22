@@ -30,6 +30,8 @@ with st.sidebar:
   season = st.selectbox('Season', ('1','2','3','4'))
   "1 = winter, 2 = spring, 3 = summer, 4 = fall"
   weather = st.selectbox('Weather', ('1','2','3','4'))
+  
+  st.markdown('_Details on Weather Variable:_')
   "1: Clear, Few clouds, Partly cloudy, Partly cloudy"
   "2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist"
   "3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds"

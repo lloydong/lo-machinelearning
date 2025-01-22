@@ -49,14 +49,18 @@ with st.expander('Input features'):
   st.write('**Combined rentals data**')
   input_rentals
 
-# X = input_rentals[1:]
+# X = input_rentals[1:] # to fit the model
 # input_row = input_rentals[:1]
+# Model training and inference
+## Train the ML model
 
-# X = df[feature_cols]
-# y = df.total_rentals
+feature_cols = ['temperature', 'season', 'weather', 'humidity']
+X_selected = input_rentals[feature_cols]
+X = X_selected[1:]
+input_row = X_selected[:1]
 
-# linreg = LinearRegression()
-# linreg.fit(X_train, y_train)
+linreg = LinearRegression()
+linreg.fit(X, y_raw)
 
 
 

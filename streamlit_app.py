@@ -16,7 +16,7 @@ with st.expander('Data'):
   X_raw
 
   st.write('**y**')
-  y = df.count
+  y = df['count']
   y
 
 with st.expander('Data visualization'):
